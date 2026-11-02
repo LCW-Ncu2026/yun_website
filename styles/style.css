@@ -1,41 +1,105 @@
-html {
-  font-size: 10px;
-  font-family: 'Open Sans', sans-serif;
-}
-
-
-h1 {
-  font-size: 60px;
-  text-align: center;
-}
-
-p, li {
-  font-size: 16px;
-  line-height: 2;
-  letter-spacing: 1px;
-}
-
-
-html {
-  background-color: #00539F;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
 }
 
 body {
-  width: 600px;
-  margin: 0 auto;
-  background-color: #FF9500;
-  padding: 0 20px 20px 20px;
-  border: 5px solid black;
+    background: linear-gradient(135deg, #1e1e2f 0%, #2d2b42 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
 }
 
-h1 {
-  margin: 0;
-  padding: 20px 0;
-  color: #00539F;
-  text-shadow: 3px 3px 1px black;
+.main-container {
+    display: flex;
+    gap: 40px;
+    width: 90%;
+    max-width: 1000px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-img {
-  display: block;
-  margin: 0 auto;
+/* 左侧输入区 */
+.input-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
+
+.input-section input, .input-section textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(0,0,0,0.2);
+    color: #fff;
+    outline: none;
+}
+
+/* 右侧预览区（毛玻璃卡片） */
+.preview-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glass-card {
+    width: 100%;
+    max-width: 320px;
+    padding: 30px 20px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+#avatarPreview {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255,255,255,0.5);
+}
+
+.glass-card h1 { font-size: 24px; margin-bottom: -10px; }
+.subtitle { font-size: 14px; color: #b0b0c0; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+.tags span {
+    background: rgba(255,255,255,0.2);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.bio { font-size: 13px; text-align: center; line-height: 1.5; color: #d0d0d0; }
+.contacts { font-size: 12px; text-align: left; width: 100%; color: #a0a0b0; }
+
+.action-btn {
+    padding: 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+.action-btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(118,75,162,0.4); }
