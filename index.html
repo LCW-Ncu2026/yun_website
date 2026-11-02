@@ -1,25 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>My test page</title>
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
-    <link href="styles/style.css" rel="stylesheet" type="text/css">
-  </head>
-  <body>
-    <h1>Mozilla is cool</h1>
-    <img src="images/firefox-icon.png" alt="The Firefox logo: a flaming fox surrounding the Earth.">
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的网站</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    <p>At Mozilla, we’re a global community of</p>
+    body {
+      background-color: #1a1a2e;
+      color: #e0e0e0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
 
-    <ul> <!-- changed to list in the tutorial -->
-      <li>technologists</li>
-      <li>thinkers</li>
-      <li>builders</li>
-    </ul>
+    .container {
+      text-align: center;
+      padding: 40px;
+    }
 
-    <p>working together to keep the Internet alive and accessible, so people worldwide can be informed contributors and creators of the Web. We believe this act of human collaboration across an open platform is essential to individual growth and our collective future.</p>
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      color: #ffffff;
+    }
 
-    <p>Read the <a href="https://www.mozilla.org/en-US/about/manifesto/">Mozilla Manifesto</a> to learn even more about the values and principles that guide the pursuit of our mission.</p>
-  </body>
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 40px;
+      color: #a0a0b0;
+    }
+
+    .bouncing-btn {
+      display: inline-block;
+      padding: 16px 48px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #ffffff;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+      animation: bounce 1.5s ease-in-out infinite;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .bouncing-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(102, 126, 234, 0.6);
+      animation-play-state: paused;
+    }
+
+    .bouncing-btn:active {
+      transform: translateY(0);
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      30% {
+        transform: translateY(-15px);
+      }
+      50% {
+        transform: translateY(0);
+      }
+      70% {
+        transform: translateY(-8px);
+      }
+      85% {
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>欢迎来到我的网站</h1>
+    <p>这是一个使用 Nginx 部署的静态网页</p>
+    <button class="bouncing-btn" onclick="alert('你好！感谢点击！')">
+      点击我
+    </button>
+  </div>
+</body>
 </html>
